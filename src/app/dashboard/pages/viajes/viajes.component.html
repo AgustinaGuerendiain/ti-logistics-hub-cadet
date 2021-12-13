@@ -1,0 +1,25 @@
+
+<select name="" id="viajes" [(ngModel)]="selected" (change)="capturar()">
+
+    <option value="" disabled selected>
+        Selecciona los viajes
+    </option>
+
+    <option value="viajes-disponibles"> 
+        Viajes disponibles
+    </option>
+
+    <option value="viajes-aceptados">
+        Viajes en curso
+    </option>
+
+</select>
+
+<div *ngIf=' selected == "viajes-disponibles" '>
+    <app-viajes-disponibles></app-viajes-disponibles>
+</div>
+<div *ngIf=' selected == "viajes-aceptados" '>
+    <app-viajes-aceptados></app-viajes-aceptados>
+</div>
+
+

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+$color-gris : linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+$color-secundario : linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%);
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: $color-gris;
+}

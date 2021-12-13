@@ -1,0 +1,22 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="ingresar()">
+
+    <h1>Iniciar sesión</h1>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput required autocomplete="off" formControlName="email">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput required autocomplete="off" formControlName="password" > 
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <button  type="submit" mat-raised-button color="primary">Ingresar</button>
+    <!-- [disabled]="loginForm.invalid" -->
+</form>
