@@ -5,15 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { FooterComponent } from './shared/footer/footer.component';
 import { LoginService } from './auth/service/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-
+    SharedModule,
+    
   ],
   providers: [LoginService,],
   bootstrap: [AppComponent]

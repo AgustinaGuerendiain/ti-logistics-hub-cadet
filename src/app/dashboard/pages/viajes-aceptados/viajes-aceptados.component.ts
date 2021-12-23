@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { postViaje, Viaje } from '../../models/viaje';
 import { ViajesService } from '../../service/viajes.service';
 import { forkJoin} from 'rxjs';
-
+import { MatDialog } from '@angular/material/dialog';
+import { VerDetalleComponent } from 'src/app/shared/modals/ver-detalle/ver-detalle.component';
 
 @Component({
   selector: 'app-viajes-aceptados',
@@ -53,7 +54,7 @@ export class ViajesAceptadosComponent implements OnInit {
     ]
   }
 
-  constructor(private viajeService : ViajesService) { }
+  constructor(private viajeService : ViajesService, private dialogo : MatDialog) { }
 
   viajes : Viaje[] = [];
 
@@ -114,8 +115,6 @@ export class ViajesAceptadosComponent implements OnInit {
       isReasigned: resignado,
     }
   
-    alert("pasaste de estado el viaje");
-  
     this.viajeService.postViaje(postViaje_).subscribe(resp=>{
   
       console.log(resp);
@@ -129,7 +128,13 @@ export class ViajesAceptadosComponent implements OnInit {
 
   }
 
-  panelOpenState = false;
+  verDetalle(viaje : Viaje){
+
+    this.dialogo.open(VerDetalleComponent, {
+      data: viaje
+    });
+  
+  }
 
 
 }

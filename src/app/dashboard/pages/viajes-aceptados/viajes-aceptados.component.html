@@ -1,6 +1,6 @@
 
 <div >
-    <mat-card class="example-card" *ngFor="let item of viajes">
+    <mat-card class="card" *ngFor="let item of viajes">
         <mat-card-title>Viaje en curso</mat-card-title>
         <mat-card-content>
             <ul>
@@ -11,27 +11,13 @@
             </ul>
 
             <div *ngIf="item.lastStatusTravel == 2 || item.lastStatusTravel == 6 ">
-                <button (click)="cambiarStatusTravel(item, true)">Cancelar viaje</button>
-                <button (click)="cambiarStatusTravel(item, false)">Llevar pedido</button>
+                <button class="boton" mat-raised-button color="primary" (click)="cambiarStatusTravel(item, false)">Llevar pedido</button>
+                <button class="boton" mat-raised-button color="warn" (click)="cambiarStatusTravel(item, true)">Cancelar viaje</button>
             </div>
           
-            <button (click)="cambiarStatusTravel(item, false)" *ngIf="item.lastStatusTravel == 3 || item.lastStatusTravel == 7 ">Terminar viaje</button>
+            <button class="boton" mat-raised-button color="primary" (click)="cambiarStatusTravel(item, false)" *ngIf="item.lastStatusTravel == 3 || item.lastStatusTravel == 7 ">Terminar viaje</button>
            
+            <button class="boton" mat-raised-button color="primary" (click)="verDetalle(item)">Detalles</button>
         </mat-card-content>
     </mat-card>
 </div>
-
-<mat-expansion-panel hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        This is the expansion title
-      </mat-panel-title>
-      <mat-panel-description>
-        This is a summary of the content
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>This is the primary content of the panel.</p>
-  </mat-expansion-panel>
-  <mat-expansion-panel (opened)="panelOpenState = true"
-                       (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>

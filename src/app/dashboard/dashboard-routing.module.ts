@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   { 
     path: 'viajes-historial', 
-    component: HistorialViajesComponent 
+    component: HistorialViajesComponent
   },
 ];
 

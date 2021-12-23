@@ -1,19 +1,12 @@
-
-<select name="" id="viajes" [(ngModel)]="selected" (change)="capturar()">
-
-    <option value="" disabled selected>
-        Selecciona los viajes
-    </option>
-
-    <option value="viajes-disponibles"> 
-        Viajes disponibles
-    </option>
-
-    <option value="viajes-aceptados">
-        Viajes en curso
-    </option>
-
-</select>
+<app-header></app-header>
+    
+<mat-form-field appearance="fill" color="primary" >
+    <mat-label class="select">Elegí una opción</mat-label>
+    <mat-select name="" id="viajes" [(ngModel)]="selected" (change)="capturar()">
+        <mat-option value="viajes-disponibles">Viajes disponibles</mat-option>
+        <mat-option value="viajes-aceptados">Viajes en curso</mat-option>
+    </mat-select>
+</mat-form-field> 
 
 <div *ngIf=' selected == "viajes-disponibles" '>
     <app-viajes-disponibles></app-viajes-disponibles>
@@ -21,5 +14,4 @@
 <div *ngIf=' selected == "viajes-aceptados" '>
     <app-viajes-aceptados></app-viajes-aceptados>
 </div>
-
 

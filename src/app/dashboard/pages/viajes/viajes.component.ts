@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viajes.component.scss']
 })
 export class ViajesComponent implements OnInit{
+  
 
   constructor() { }
 
@@ -18,5 +19,4 @@ export class ViajesComponent implements OnInit{
     this.verSelected = this.selected;
   }
  
-
 }

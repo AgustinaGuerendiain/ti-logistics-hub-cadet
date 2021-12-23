@@ -1,8 +1,8 @@
-<p>historial-viajes works!</p>
+<app-header></app-header>
 
 <div >
-    <mat-card class="example-card" *ngFor="let item of viajes">
-        <mat-card-title>Viaje</mat-card-title>
+    <mat-card class="card" *ngFor="let item of viajes">
+        <mat-card-title>Viaje realizado</mat-card-title>
         <mat-card-content>
             <ul>
                 <li>Direccion {{item.travelEquipmentDTOs[item.travelEquipmentDTOs.length-1].equipment.cliente.address}} </li>

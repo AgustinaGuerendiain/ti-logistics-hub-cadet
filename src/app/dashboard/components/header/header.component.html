@@ -1,0 +1,19 @@
+
+<mat-toolbar class="menu">
+  
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>TODO IT</span>
+
+    <mat-menu #menu="matMenu">
+
+      <div *ngIf="existeSesion()">
+          <button mat-menu-item><a [routerLink]="['/dashboard/viajes']" routerLinkActive="router-link-active">Viajes</a></button>
+          <button mat-menu-item><a [routerLink]="['/dashboard/viajes-historial']" routerLinkActive="router-link-active">Historial viajes</a></button>
+          <button mat-menu-item><a (click)="cerrarSesion()">Cerrar sesión</a></button>
+      </div>
+
+    </mat-menu>
+    
+  </mat-toolbar>

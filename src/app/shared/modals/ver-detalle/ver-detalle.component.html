@@ -1,0 +1,14 @@
+<div class="boton-derecho">
+    <button (click)="closeModal()" mat-raised-button color="primary">
+        <mat-icon matSuffix >close</mat-icon>
+    </button>
+</div>
+
+<ul>
+    <li>Nombre cliente: {{item.travelEquipmentDTOs[item.travelEquipmentDTOs.length-1].equipment.cliente.fullName}} </li>
+    <li>Direccion {{item.travelEquipmentDTOs[item.travelEquipmentDTOs.length-1].equipment.cliente.address}} </li>
+    <li>Fecha {{(item.travelEquipmentDTOs[item.travelEquipmentDTOs.length-1].operationDate) }}</li>
+    <li>Equipo: Marca {{item.travelEquipmentDTOs[0].equipment.mark}}, Modelo {{item.travelEquipmentDTOs[0].equipment.model}}</li>
+    <li>Estado del viaje {{item.lastStatusTravel}} </li>
+</ul>
+

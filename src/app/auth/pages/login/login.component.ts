@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from '../../models/usuario';
 import { Router } from '@angular/router';
@@ -50,12 +50,16 @@ export class LoginComponent {
     }, error => {
 
       this.loginForm.reset();
-      
+
       console.log(error);
+      
+      alert(error)
 
     });
 
   }
 
+
+  
 
 }

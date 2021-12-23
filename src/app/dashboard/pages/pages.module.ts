@@ -6,6 +6,7 @@ import { ViajesAceptadosComponent } from './viajes-aceptados/viajes-aceptados.co
 import { HistorialViajesComponent } from './historial-viajes/historial-viajes.component';
 import { MaterialModule } from 'src/app/material.module';
 import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }

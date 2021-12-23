@@ -63,7 +63,6 @@ export class ViajesDisponiblesComponent implements OnInit {
   traerViajesDisponibles(){
     let uno  =  this.viajeService.getViajes(1);
     let cinco = this.viajeService.getViajes(5);
-   //let diez =  this.viajeService.getViajes(10);
    
     forkJoin([uno,cinco]).subscribe(resp=>{
 
@@ -98,8 +97,6 @@ export class ViajesDisponiblesComponent implements OnInit {
       cadeteID: idCadete,
       isReasigned: false,
     }
-
-    alert("asignaste viaje wii");
 
     this.viajeService.postViaje(postViaje_).subscribe(resp=>{
 

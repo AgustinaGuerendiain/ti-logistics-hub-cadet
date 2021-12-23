@@ -86,8 +86,6 @@ export class HistorialViajesComponent implements OnInit {
       return Date.parse(a.travelEquipmentDTOs[a.travelEquipmentDTOs.length-1].operationDate) - Date.parse(b.travelEquipmentDTOs[b.travelEquipmentDTOs.length-1].operationDate);
     });
 
-    console.log(this.viajes)
-
    },error => {
 
     console.log(error);

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   { 
     path: 'auth', 
@@ -8,8 +9,12 @@ const routes: Routes = [
   },
   { 
     path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) 
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   },
+  {
+    path: '**',
+    redirectTo: 'auth/login'
+  }
 ];
 
 @NgModule({
